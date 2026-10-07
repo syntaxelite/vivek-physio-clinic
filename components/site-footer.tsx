@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { clinic, navigation } from "@/data/clinic";
+import { appointmentHref, clinic, navigation } from "@/data/clinic";
 
 export function SiteFooter() {
   return (
@@ -24,7 +24,9 @@ export function SiteFooter() {
             </Link>
           ))}
           <Link
-            href={clinic.phoneHref}
+            href={appointmentHref}
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#355d8a] px-4 py-2.5 text-sm font-semibold text-slate-50 transition-all duration-200 hover:bg-[#294a70]"
           >
             Book an Appointment
