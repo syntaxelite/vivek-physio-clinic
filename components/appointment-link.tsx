@@ -9,8 +9,8 @@ type AppointmentLinkProps = {
 export function AppointmentLink({ variant = "primary" }: AppointmentLinkProps) {
   const appearance =
     variant === "inverse"
-      ? "bg-stone-50 text-emerald-950 hover:bg-white focus-visible:outline-stone-50"
-      : "bg-emerald-900 text-stone-50 shadow-sm hover:bg-emerald-800 focus-visible:outline-emerald-700";
+      ? "bg-[#edf2f7] text-[#23364a] hover:bg-[#fbfcfd] focus-visible:outline-white"
+      : "bg-[#355d8a] text-slate-50 shadow-sm hover:bg-[#294a70] focus-visible:outline-[#355d8a]";
 
   return (
     <Link

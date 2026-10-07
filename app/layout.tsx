@@ -13,17 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Crown Dental & Cosmetology Clinic | Dental & Cosmetic Care in Erode",
+  title: "Vivek Physio Clinic | Physiotherapy Clinic in Erode",
   description:
-    "Premium dental and cosmetic care in Erode, Tamil Nadu. Comprehensive dental services, cosmetic dentistry, and permanent makeup under one roof.",
+    "Physiotherapy clinic in Erode offering rehabilitation, back pain care, knee pain treatment, post-surgical rehabilitation, and movement-focused recovery support.",
   keywords: [
-    "Dental clinic in Erode",
-    "Dentist in Erode",
-    "Dental implants Erode",
-    "Invisalign Erode",
-    "Cosmetic dentistry Erode",
-    "Permanent makeup Erode",
+    "Physiotherapy clinic in Erode",
+    "Physiotherapist in Erode",
+    "Physiotherapy treatment Erode",
+    "Physiotherapy rehabilitation Erode",
+    "Back pain physiotherapy Erode",
+    "Knee pain physiotherapy Erode",
+    "Post-surgical rehabilitation Erode",
   ],
+  openGraph: {
+    title: "Vivek Physio Clinic",
+    description:
+      "Physiotherapy clinic in Erode focused on mobility, pain relief, and recovery.",
+    type: "website",
+    locale: "en_IN",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

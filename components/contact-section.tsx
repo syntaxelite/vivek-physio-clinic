@@ -4,17 +4,18 @@ import { clinic } from "@/data/clinic";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-[#f8f4ee] px-4 pb-20 pt-12 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.25rem] border border-stone-200 bg-white shadow-[0_24px_80px_rgba(38,32,28,0.04)]">
+    <section id="contact" className="bg-[#f2f5f8] px-4 pb-20 pt-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.25rem] border border-[#d8e1eb] bg-[#fbfcfd] shadow-[0_24px_80px_rgba(35,54,74,0.05)]">
         <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="bg-[#123b35] p-8 text-stone-50 md:p-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200">
+          <div className="bg-[#213a57] p-8 text-slate-50 md:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d8e1eb]">
               Visit us
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.05em] md:text-5xl">
               {clinic.name}
             </h2>
-            <div className="mt-8 space-y-5 text-base text-stone-200">
+
+            <div className="mt-8 space-y-5 text-base text-slate-200">
               <address className="not-italic">
                 {clinic.location.map((line) => (
                   <span key={line} className="block">
@@ -22,59 +23,53 @@ export function ContactSection() {
                   </span>
                 ))}
               </address>
+              <p className="font-medium text-[#eff4fa]">{clinic.phoneDisplay}</p>
+              <p className="text-sm uppercase tracking-[0.18em] text-[#d8e1eb]">Open · Closes 9 PM</p>
             </div>
           </div>
 
           <div className="p-6 md:p-8">
-            <div
-              className={`grid gap-5 ${
-                clinic.phoneHref && clinic.whatsappHref ? "sm:grid-cols-2" : "grid-cols-1"
-              }`}
-            >
-              {clinic.whatsappHref && (
-                <div className="rounded-[1.5rem] border border-emerald-900 bg-emerald-900 p-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-100">
-                    WhatsApp
-                  </p>
-                  <Link
-                    href={clinic.whatsappHref}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-4 inline-flex min-h-11 items-center rounded-full bg-stone-50 px-5 text-base font-semibold text-emerald-950 transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-50"
-                  >
-                    Start a chat
-                  </Link>
-                </div>
-              )}
-              {clinic.phoneHref && clinic.phoneDisplay && (
-                <div className="rounded-[1.5rem] border border-stone-200 bg-[#f6f3ee] p-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">
-                    Call
-                  </p>
-                  <Link
-                    href={clinic.phoneHref}
-                    className="mt-4 inline-block text-xl font-semibold tracking-[-0.04em] text-stone-900 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700"
-                  >
-                    {clinic.phoneDisplay}
-                  </Link>
-                </div>
-              )}
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div className="rounded-[1.5rem] border border-[#d8e1eb] bg-[#f2f5f8] p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#355d8a]">
+                  Call now
+                </p>
+                <Link
+                  href={clinic.phoneHref}
+                  className="mt-4 inline-block text-xl font-semibold tracking-[-0.04em] text-slate-900 underline-offset-4 hover:underline"
+                >
+                  {clinic.phoneDisplay}
+                </Link>
+              </div>
+
+              <div className="rounded-[1.5rem] border border-[#d8e1eb] bg-[#e8eef4] p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#355d8a]">
+                  Directions
+                </p>
+                <Link
+                  href={clinic.directionsHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-block text-lg font-semibold tracking-[-0.04em] text-slate-900 underline-offset-4 hover:underline"
+                >
+                  Get Directions
+                </Link>
+              </div>
             </div>
 
-            <div className="mt-6 rounded-[1.5rem] border border-stone-200 bg-[#f6f3ee] p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">
-                Directions
+            <div className="mt-6 rounded-[1.5rem] border border-[#d8e1eb] bg-[#f2f5f8] p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#355d8a]">
+                Booking
               </p>
               <Link
-                href={clinic.mapsHref}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-4 inline-block text-lg font-semibold tracking-[-0.04em] text-stone-900 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700"
+                href={clinic.phoneHref}
+                className="mt-4 inline-flex min-h-12 items-center justify-center rounded-full bg-[#355d8a] px-5 py-3 text-sm font-semibold text-slate-50 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#294a70] active:translate-y-px"
               >
-                Open in Google Maps
+                Book an Appointment
               </Link>
             </div>
-            <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-stone-200 bg-[#f6f3ee]">
+
+            <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-[#d8e1eb] bg-[#f2f5f8]">
               <iframe
                 src={clinic.mapsEmbedUrl}
                 title={`Map for ${clinic.name}`}
