@@ -22,7 +22,8 @@ export const clinic = {
     "https://images.unsplash.com/photo-1544367567-0f2fcbec6c4f?auto=format&fit=crop&w=1200&q=80",
 };
 
-export const appointmentHref = clinic.phoneHref;
+export const appointmentHref =
+  "https://wa.me/918270909816?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Vivek%20Physio%20Clinic.";
 
 export const navigation = [
   { label: "Home", href: "#home" },

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { clinic } from "@/data/clinic";
+import { appointmentHref, clinic } from "@/data/clinic";
 
 export function ContactSection() {
   return (
@@ -62,7 +62,9 @@ export function ContactSection() {
                 Booking
               </p>
               <Link
-                href={clinic.phoneHref}
+                href={appointmentHref}
+                target="_blank"
+                rel="noreferrer"
                 className="mt-4 inline-flex min-h-12 items-center justify-center rounded-full bg-[#355d8a] px-5 py-3 text-sm font-semibold text-slate-50 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#294a70] active:translate-y-px"
               >
                 Book an Appointment

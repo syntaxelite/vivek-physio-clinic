@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { clinic } from "@/data/clinic";
+import { appointmentHref, clinic } from "@/data/clinic";
 
 export function HeroSection() {
   return (
@@ -24,7 +24,9 @@ export function HeroSection() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="tel:+918270909816"
+                href={appointmentHref}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex min-h-12 items-center justify-center whitespace-nowrap rounded-full bg-[#355d8a] px-5 py-3 text-sm font-semibold text-slate-50 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#294a70] active:translate-y-px"
               >
                 Book an Appointment

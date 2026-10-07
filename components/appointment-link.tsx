@@ -15,6 +15,8 @@ export function AppointmentLink({ variant = "primary" }: AppointmentLinkProps) {
   return (
     <Link
       href={appointmentHref}
+      target="_blank"
+      rel="noreferrer"
       className={`inline-flex min-h-12 items-center justify-center whitespace-nowrap rounded-full px-5 py-3 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${appearance}`}
     >
       Book an Appointment
